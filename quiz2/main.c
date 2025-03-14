@@ -5,24 +5,23 @@
 int main() {
     Node* head = NULL;
 
-    insertLast(&head, 10);
-    insertLast(&head, 20);
-    insertLast(&head, 30);
+    insertFirst(&head, 7);
     displayList(head);
-
+    insertLast(&head, 11);
+    displayList(head);
+    insertAfter(head, 7, 9);
+    displayList(head);
     insertFirst(&head, 5);
-    insertAfter(head, 10, 15);
-    insertBefore(&head, 20, 18);
     displayList(head);
-
-    updateNode(head, 15, 17);
+    insertLast(&head, 13);
     displayList(head);
-
-    deleteFirst(&head);
     deleteLast(&head);
-    deleteNode(&head, 18);
-    deleteAfter(&head, 10);
     displayList(head);
-
+    deleteNode(&head, 7);
+    deleteFirst(&head);
+    displayList(head);
+    destroyList(&head);
+    displayList(head);
+    
     return 0;
 }
